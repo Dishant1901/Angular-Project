@@ -1,0 +1,74 @@
+<div>
+
+    <label for="search">Search: </label>
+    <input type="search" style="width:35%;"  placeholder="Search Product by Name or Type @_@" id="search" [(ngModel)] = "term"  (input) = "search()"  >
+    <!-- <button  > Search </button> -->
+
+    <div  > 
+        <label for="sort">Sort By</label>
+        <select name="sort" id="sort" [(ngModel)] = "sortBy" (change) = "sortProduct()" >
+            <option value="price">Price</option>
+            <option value="type">Type</option>
+            <option value="title">Title</option>
+        </select>
+
+        <button (click) = "toggle()" >Toggle</button>
+
+    </div>
+
+    <!--  -->
+    <div>
+
+      
+        <!-- <button  > Search </button> -->
+<!--     
+        <div  > 
+            <label for="sort">Filter By</label>
+            <select name="sort" id="sort" [(ngModel)] = "filterBy" (change) = "filterProducts()" >
+                <!-- <option value="price">Price</option> -->
+                <!-- <option value="type">Type</option>
+                <option value="title">Title</option>
+            </select>
+    
+        </div> --> 
+
+
+
+
+
+<br> <br>
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Type</th>
+                <th>Buys</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <tr *ngFor = "let m of fr" >
+                <td>{{m.id}}</td>
+                <td>{{m.title}}</td>
+                <td> {{m.type}} </td>
+                <td> {{m.buys}} </td>
+                <td> {{m.price}}</td>
+                <td> {{m.date}}</td>
+
+                <button   (click) = "onUpdate(m.id)" >Edit</button>
+                 <!-- <button routerLink = "/edit-nusic/" >Edit</button> -->
+                <button (click) = "onDelete(m.id)" >Delete</button>
+                <button (click) = "onView(m.id)" >View</button>
+
+                    
+            </tr>
+        </tbody>
+
+    </table>
+
+
+</div>

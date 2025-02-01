@@ -1,0 +1,44 @@
+{
+  "music": [
+    {
+      "id": "13",
+      "title": "piano",
+      "price": 25000,
+      "buys": "10",
+      "type": "keyboard",
+      "date": "2025-01-31"
+    },
+    {
+      "id": "324",
+      "title": "snare",
+      "price": 1000,
+      "buys": "5",
+      "type": "drum",
+      "date": "2025-01-29"
+    },
+    {
+      "id": "520",
+      "title": "arp",
+      "price": 1000,
+      "buys": "4",
+      "type": "string",
+      "date": "2025-01-31"
+    },
+    {
+      "id": "5f0a",
+      "title": "Pluck",
+      "price": 4000,
+      "buys": "1",
+      "type": "string",
+      "date": "2025-02-14"
+    },
+    {
+      "id": "069f",
+      "title": "synth",
+      "price": 1000,
+      "buys": "1",
+      "type": "string",
+      "date": "2025-03-14"
+    }
+  ]
+}

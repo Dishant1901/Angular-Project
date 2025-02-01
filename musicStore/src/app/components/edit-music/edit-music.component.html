@@ -1,0 +1,70 @@
+<form [formGroup] = "musicForm" (ngSubmit) = "onUpdate()"  >
+
+
+    <div>
+        <label for="title">Title:</label>
+        <input type="text"  id="title" formControlName = "title">
+        <div *ngIf="musicForm.get('title')?.touched && musicForm.get('title')?.invalid" >
+            <div *ngIf= "musicForm.get('title')?.hasError('required')" >
+                Title is required.
+            </div>
+        </div>
+    </div>
+
+    <!--Price  -->
+
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" formControlName="price">
+        <div *ngIf = "musicForm.get('price')?.touched && musicForm.get('price')?.invalid" >
+            <div *ngIf = "musicForm.get('price')?.hasError('required')" >
+                Price is required.
+            </div>
+            <div *ngIf = "musicForm.get('price')?.hasError('min')" >
+                Price cannot be null
+            </div>
+        </div>
+    </div>
+    
+    <!-- Buys -->
+    <div>
+        <label for="buys">Buys:</label>
+        <input type="text" id="buys" formControlName = "buys" >
+        <div *ngIf = "musicForm.get('buys')?.touched && musicForm.get('buys')?.invalid" >
+            <div *ngIf = "musicForm.get('buys')?.hasError('required')" >
+                No. of Buys is required.
+            </div>
+            <div *ngIf = "musicForm.get('buys')?.hasError('min')" >
+                No. of Buys cannot be Null!
+            </div>
+        </div>
+    </div>
+
+    <!-- Type -->
+
+    <div>
+        <label for="type">Type:</label>
+        <input type="text" id="type" formControlName = "type">
+        <div *ngIf = "musicForm.get('type')?.touched && musicForm.get('type')?.invalid" >
+            <div *ngIf = "musicForm.get('type')?.hasError('required')" >
+                Type is requored.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Date -->
+     <div>
+        <label for="date">Date</label>
+        <input type="date" id="date"  formControlName = "date">
+        <div *ngIf = "musicForm.get('date')?.touched && musicForm.get('date')?.invalid" >
+            <div *ngIf = "musicForm.get('date')?.hasError('required') ">
+                Date is requir4ed.
+            </div>
+        </div>
+     </div>
+
+     <button type="submit">Update Product</button>
+
+
+</form>
